@@ -87,7 +87,11 @@ nnoremap ; :
 " save on lose focus
 au FocusLost * :wa
 
-"
+" NERDtree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+
 " leader magic
 "
 
