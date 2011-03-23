@@ -1,0 +1,5 @@
+Vimfiles
+========
+
+You'll need to symlink .vimrc and .gvimrc to ~/.vimrc and ~/.gvimrc to make
+these work for you.
