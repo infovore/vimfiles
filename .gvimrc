@@ -17,6 +17,10 @@ endif
 " Start without the toolbar
 set guioptions-=T
 
+"also start without scrollbars.
+set guioptions-=r
+set guioptions-=L
+
 " Default gui color scheme
 color molokai
 set guifont=Menlo:h11
