@@ -41,6 +41,11 @@ set undofile
 " new leader
 let mapleader = ","
 
+" set swp/tmp files to use a common location and stop cluttering up my
+" directories
+set backupdir=~/.vim/tmp,~/tmp,/tmp
+set directory=~/.vim/tmp,~/tmp,/tmp
+
 "tame searching and moving
 nnoremap / /\v
 vnoremap / /\v
