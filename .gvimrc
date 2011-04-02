@@ -22,7 +22,6 @@ set guioptions-=r
 set guioptions-=L
 
 " Default gui color scheme
-color molokai
 set guifont=Menlo:h11
 
 " Project Tree

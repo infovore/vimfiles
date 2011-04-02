@@ -19,7 +19,13 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" colors
+set background=dark
+colorscheme molokai
+"colorscheme solarized
+
 " odds and ends
+"
 
 set encoding=utf-8
 set scrolloff=3
