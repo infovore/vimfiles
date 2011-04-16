@@ -122,3 +122,5 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" actionscript 3 files end .as
+au BufRead,BufNewFile *.as set filetype=actionscript
