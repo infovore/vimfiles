@@ -101,6 +101,8 @@ au FocusLost * :wa
 " NERDtree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+nnoremap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+
 
 
 " leader magic
