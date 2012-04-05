@@ -22,8 +22,8 @@ set expandtab
 
 " colors
 set background=dark
-colorscheme molokai
-"colorscheme solarized
+"colorscheme molokai
+colorscheme solarized
 
 " odds and ends
 "
@@ -127,3 +127,4 @@ nnoremap <C-l> <C-w>l
 
 " actionscript 3 files end .as
 au BufRead,BufNewFile *.as set filetype=actionscript
+au BufRead,BufNewFile *.treetop set filetype=ruby
