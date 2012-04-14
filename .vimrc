@@ -21,9 +21,9 @@ set softtabstop=2
 set expandtab
 
 " colors
-set background=dark
-"colorscheme molokai
-colorscheme solarized
+"set background=dark
+colorscheme molokai
+"colorscheme solarized
 
 " odds and ends
 "
@@ -99,15 +99,12 @@ nnoremap ; :
 " save on lose focus
 au FocusLost * :wa
 
-" NERDtree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-nnoremap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+" ruby hashrocket on c-l
+imap <c-l> <space>=><space>
 
-
-
-" leader magic
-"
+" Clear search buffer on carraige return
+:nnoremap <CR> :nohlsearch<cr>
+nnoremap <leader><leader> <c-^>
 
 " open vimrc in new window.
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
