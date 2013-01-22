@@ -102,6 +102,9 @@ au FocusLost * :wa
 " ruby hashrocket on c-l
 imap <c-l> <space>=><space>
 
+" reload Command-T on leader rt
+nnoremap <leader>rt :CommandTFlush<CR>
+
 " Clear search buffer on carraige return
 :nnoremap <CR> :nohlsearch<cr>
 nnoremap <leader><leader> <c-^>
@@ -125,3 +128,6 @@ nnoremap <C-l> <C-w>l
 " actionscript 3 files end .as
 au BufRead,BufNewFile *.as set filetype=actionscript
 au BufRead,BufNewFile *.treetop set filetype=ruby
+au BufRead,BufNewFile *.pde set filetype=java
+au Filetype php,html,xml,xsl source ~/.vim/scripts/closetag.vim 
+
