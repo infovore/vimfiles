@@ -1,4 +1,3 @@
-
 " .vimrc
 " heavily inspired by
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#why-i-came-back-to-vim
@@ -125,9 +124,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+set splitbelow
+set splitright
+
 " actionscript 3 files end .as
 au BufRead,BufNewFile *.as set filetype=actionscript
 au BufRead,BufNewFile *.treetop set filetype=ruby
 au BufRead,BufNewFile *.pde set filetype=java
-au Filetype php,html,xml,xsl source ~/.vim/scripts/closetag.vim 
+au BufRead,BufNewFile *.ino set filetype=c
+au Filetype php,html,xml,xsl,erb source ~/.vim/scripts/closetag.vim 
 
+" powerline fonts
+let g:airline_powerline_fonts = 1
