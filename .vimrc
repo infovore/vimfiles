@@ -124,6 +124,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" map leader st to Gstatus
+nnoremap <leader>st :Gstatus
+
 set splitbelow
 set splitright
 
@@ -136,3 +139,19 @@ au Filetype php,html,xml,xsl,erb source ~/.vim/scripts/closetag.vim
 
 " powerline fonts
 let g:airline_powerline_fonts = 1
+
+" magic to deal with trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+ 
+nnoremap <silent> <leader>ww :call <SID>StripTrailingWhitespaces()<CR>
+
