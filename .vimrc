@@ -65,6 +65,11 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Set ignores correctly
+
+set wildignore=*.class,*.o,*~,*.pyc,.git,node_modules  " Ignore certain files in tab-completion
+
+
 " Handle Long Lines correctly
 set wrap
 set textwidth=79
@@ -135,6 +140,7 @@ au BufRead,BufNewFile *.as set filetype=actionscript
 au BufRead,BufNewFile *.treetop set filetype=ruby
 au BufRead,BufNewFile *.pde set filetype=java
 au BufRead,BufNewFile *.ino set filetype=c
+au BufNewFile,BufRead *.nut setf squirrel
 au Filetype php,html,xml,xsl,erb source ~/.vim/scripts/closetag.vim 
 
 " powerline fonts
