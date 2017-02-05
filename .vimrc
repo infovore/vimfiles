@@ -140,6 +140,9 @@ au BufRead,BufNewFile *.as set filetype=actionscript
 au BufRead,BufNewFile *.treetop set filetype=ruby
 au BufRead,BufNewFile *.pde set filetype=java
 au BufRead,BufNewFile *.ino set filetype=c
+au BufRead,BufNewFile *.dsp set filetype=faust
+au BufRead,BufNewFile *.smi,*.sami set filetype=xml
+au BufRead,BufNewFile *.smi.erb set filetype=html.eruby
 au BufNewFile,BufRead *.nut setf squirrel
 au Filetype php,html,xml,xsl,erb source ~/.vim/scripts/closetag.vim 
 
