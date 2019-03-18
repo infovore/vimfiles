@@ -22,7 +22,9 @@ set guioptions-=r
 set guioptions-=L
 
 " Default gui color scheme
-set guifont=Meslo\ LG\ S\ for\ Powerline:h13
+"set guifont=Meslo\ LG\ S\ for\ Powerline:h13
+set macligatures
+set guifont=Fira\ Code:h16
 
 " If the parameter is a directory, cd into it
 function s:CdIfDirectory(directory)

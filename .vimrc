@@ -25,7 +25,9 @@ colorscheme molokai
 "colorscheme solarized
 
 " odds and ends
-"
+
+set backupdir=~/tmp/backup//
+set directory=~/tmp/swp//
 
 set encoding=utf-8
 set scrolloff=3
@@ -98,16 +100,13 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " map ; to :
-nnoremap ; :
+"nnoremap ; :
 
 " save on lose focus
 au FocusLost * :wa
 
 " ruby hashrocket on c-l
 imap <c-l> <space>=><space>
-
-" reload Command-T on leader rt
-nnoremap <leader>rt :CommandTFlush<CR>
 
 " Clear search buffer on carraige return
 :nnoremap <CR> :nohlsearch<cr>
@@ -164,3 +163,18 @@ endfunction
  
 nnoremap <silent> <leader>ww :call <SID>StripTrailingWhitespaces()<CR>
 
+let g:ale_pattern_options = {
+\   '.*\.erb$': {'ale_enabled': 0},
+\}
+
+let g:ale_javascript_eslint_use_global = 1
+
+"let g:CommandTFileScanner = 'find'
+set wildignore+=tmp/**,*.mp3,*.mp4,*.avi,*.mov
+
+"ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+"Integrate CtrlP with ripgrep
+set grepprg=rg\ --color=never
+let g:ctrlp_user_command = 'rg %s --files --glob ""'
+let g:ctrlp_use_caching = 0
